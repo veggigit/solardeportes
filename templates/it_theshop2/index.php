@@ -15,7 +15,12 @@ if (JRequest::getCmd("tmpl", "index") == "offline") {
         }
     }
 } else {
-	
+
+// importamos helper
+include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/mod_jshopping_categories/helper.php";
+// nuevo objetoSS
+$cat = new jShopCategoriesHelper();
+
 // Include Variables
 include_once(JPATH_ROOT . "/templates/" . $this->template . '/icetools/vars.php');
 
@@ -37,6 +42,10 @@ include_once(JPATH_ROOT . "/templates/" . $this->template . '/icetools/vars.php'
 </head>
 
 <body class="<?php echo $pageclass->get('pageclass_sfx'); ?>">
+
+<!-- Usamos clase -->
+<p><?php echo $cat->hola() ?></p>
+
 
 
 <?php if ($this->params->get('styleswitcher')) { ?>

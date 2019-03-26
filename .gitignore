@@ -1,4 +1,5 @@
 *
 !*/
 !/templates/it_theshop2/**
+!/modules/mod_jshopping_categories/**
 !.gitignore
