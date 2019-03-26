@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site">
+	<name>it_theshop2</name>
+	<version>1.0</version>
+	<creationDate>April 2013</creationDate>
+	<author>IceTheme</author>
+	<authorEmail>support@icetheme.com</authorEmail>
+	<copyright>Copyright (C) 2008 - 2013 IceTheme.com</copyright>
+	<license>IceTheme Joomla Club Members Usage Only</license>
+<description>Got plenty of content and hot stuff that you want to share with everyone? Here is the perfect match for you, IT Theshop 2, built in with one of the greatest Joomla Extensions ever, EasyBlog.<![CDATA[<p> <a href="http://www.icetheme.com"> IceTheme.com </a> | <a href="http://demo.icetheme.com/?template=it_theshop2"> View Demo </a> | <a href="http://www.icetheme.com/forums"> Get Support </a>				
+]]></description>
+	
+	<files>
+		<filename>component.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>bootstrap</folder>
+		<folder>icetools</folder>
+	</files>
+	
+	<positions>
+		<position>debug</position>
+		<position>mainmenu</position>
+		<position>weather</position>
+		<position>search</position>
+		<position>language</position>
+		<position>icecarousel</position>
+		<position>promo1</position>
+		<position>promo2</position>
+		<position>promo3</position>
+		<position>promo4</position>
+		<position>banner</position>
+		<position>left</position>
+		<position>notice</position>
+		<position>sidebar</position>
+		<position>bottom1</position>
+		<position>bottom2</position>
+		<position>bottom3</position>
+		<position>bottom4</position>
+		<position>slider</position>
+		<position>footer1</position>
+		<position>footer2</position>
+		<position>footer3</position>
+		<position>footer4</position>
+		<position>copyrightmenu</position>
+	</positions>
+	
+	<config>
+		
+		<fields name="params"  addfieldpath="templates/it_theshop2/icetools/elements">
+		
+<!--  General Parameters \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  -->	
+							
+			<fieldset name="basic" label="General">
+				<field  type="icespace" name="icespace"/>
+				<field name="menu_styles" type="hidden" default="" label="" description="" />
+
+				 <field name="TemplateStyle" class="lof_box" type="list" default="style1" label="Default Template Style"  description="Select your default template style that you would like to use for your website.">
+					<option value="style1">Style 1</option>
+					<option value="style2">Style 2</option>
+					<option value="style3">Style 3</option>
+					<option value="style4">Style 4</option>	
+					<option value="style5">Style 5</option>
+					<option value="style6">Style 6</option>
+				</field>
+				
+				<field name="styleswitcher" type="radio"  class="btn-group" default="0" label="Display Style Switcher?"  description="Would you like to display the Style Switcher on the right of your website so that your members can change the template style above?" filter="int">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				
+		
+				<field name="" type="spacer" default="" label="" description="" />
+				<field name="" type="spacer" default="" label="" description="" />	
+				
+				<field name="responsive_template" type="radio"  class="btn-group" default="1" label="Enabled Responsive?"  description="If you Enable this parameter you will have a Responsive template , which will fit in every screen resolution. Such as smartphone and tablets. (Yes is recommended)" filter="int">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				
+				<field name="logo" type="media" default="" label="Site Logo" description="Select your website logo image from your computer and chose it as the default logo." />	
+				
+				<field 
+					name="homepage_content" 
+					type="radio"  
+					class="btn-group" 
+					default="1" 
+					label="Hide Frontpage content?" 
+					description="Would you like to hide the content (Joomla content) on the frontpage? Enable this feature only if you plan to use only modules on the frontpage"
+					filter="int">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+				</field>	
+				
+				<field name="equal_column" type="radio"  class="btn-group" default="1" label="Enable Equal Columns?"  description="Would you like to enable the Equal height columns to have the same height for all the columns?" filter="int">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				</field>		
+				
+					
+				<field name="icelogo" type="radio" default="1" class="btn-group" label="IceTheme Logo"  description="Choose whether you want to keep the IceTheme logo or not. (Not obligatory)" filter="int">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				</field>	
+			
+			
+				<field name="go2top" type="radio"  class="btn-group" default="1" label="Go To Top Link"  description="Would you like to enable a scrolling image on the bottom right of your website so that you members can scroll to top easily?" filter="int">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>			
+				
+				
+			</fieldset>
+			
+<!-- End General Parameters \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  -->	
+			
+<!--  Social Parameters \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  -->	
+		
+			<fieldset name="social" label="Social">
+				
+				 <field name="social_icon_fb" type="radio" default="1"  class="btn-group" label="Show Facebook Icon?"  description="Wwheter to show or not the Facebok icon (on the footer)" filter="int">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+				
+				<field name="social_fb_user" type="text" default="icetheme" label="Facebook Fan Page Username" description="Enter here your Facebook Fan Page Username"/>
+				
+				<field name="" type="spacer" default="" label="" description="" />
+
+				 <field name="social_icon_tw" type="radio" default="1"  class="btn-group" label="Show Twitter Icon?"  description="Whether to show or not the Facebook icon (on the footer)" filter="int">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+				
+				<field name="social_tw_user" type="text" default="icetheme" label="Twitter Username" description="Enter here your Twitter Username"/>
+				
+				<field name="" type="spacer" default="" label="" description="" />
+				
+				 <field name="social_icon_yt" type="radio" default="1"  class="btn-group" label="Show Youtube Icon?"  description="Whether to show or not the YouTube icon (on the footer)" filter="int">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+			
+				<field name="social_yt_user" type="text" default="icetheme" label="YouTube Username" description="Enter here your YouTube Username"/>
+				
+				<field name="" type="spacer" default="" label="" description="" />
+				
+		
+			</fieldset>
+			
+<!-- End Social Parameters \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  -->
+			
+<!-- Custom CSS Code \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  -->
+			
+		<fieldset name="customcss" label="Custom CSS">
+		
+     	 <field
+         name="Add Custom CSS"
+		 description="You may enter here your Custom CSS code to overwrite the default CSS that we have added on the template. Also you may paste here CSS codes that our support team may have given to you."
+         type="editor"
+         editor="codemirror"
+         buttons="no"
+		 required="true" 
+		 filter="raw"
+         rows="300"
+		 cols="80"
+		 default=""
+		 />
+		 
+		</fieldset>
+		
+<!-- End Custom CSS Code \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  -->
+
+			
+		<!-- Custom Code \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  -->
+			
+		<fieldset name="custom" label="Google Analytics">
+			<field name="google_analytics" type="radio" default="1"  class="btn-group" label="Track with Google Analytics?"  description="Would you like to measure your website with Google Analytics? You should have an Google Analytics account to enable this feature. For more information please go to google.com/analytics" filter="int">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+			</field>
+			
+			<field name="analytics_code" type="text" default="UA-31764391-1" label="Google Analytics ID" description="Enter here your Google Analytics unique id e.g: UA-31764391-1 "/>				
+		</fieldset>
+			
+	<!-- End CustomCode \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  -->
+		
+		</fields>
+			
+	</config>
+	
+</extension>

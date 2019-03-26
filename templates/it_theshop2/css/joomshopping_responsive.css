@@ -1,0 +1,158 @@
+/* -------------------------------------------------------------
+	© IceTheme 2013
+---------------------------------------------------------------- */
+
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+	#categories .joomshooping_categories_item { width:210px;}
+		
+	.productfull .price_area { width:380px;}
+			
+	.jshop_list_category .image { min-height:150px;}
+		
+	.productfull .price_area .prod_buttons .buttons .button_cart { float: left; margin-left: 45px; margin-top:0; clear:none;}	
+	
+	.productfull .price_area .prod_buttons .button_wishlist_product { float: left; margin-top:0; clear:none; margin-left: 10px;}	
+	
+	.prod_buttons .prod_qty_input,
+	.prod_buttons .prod_qty { float:left; display: inline-block;}
+	
+	.price_area div.jshop_prod_attributes select { width: 220px;}
+					
+}
+
+
+/* Smaller than Large Desktop */
+@media (max-width: 1200px) {
+	
+	
+		
+					
+		
+		
+		
+		
+}
+
+
+
+	
+/* landscape tablet and desktop */
+@media (max-width: 979px) {
+	
+		
+	#categories .joomshooping_categories_item { width:221px;}	
+	
+	
+	#ice_cart { border-left:none}
+	
+	.jshop_list_category .jshop_categ {
+		clear:both;
+		float:none;
+		width:100%!important;}
+		
+		.jshop_list_category .jshop_categ .image {
+			min-height:150px;}
+
+
+	
+		.form-horizontal textarea#review_review {width:auto!important}
+	
+	
+		.productfull h1 { width: auto; line-height: 32px; font-size:22px; margin:0}
+		
+}
+
+
+@media (min-width: 767px) and (max-width: 979px) {
+	
+
+}
+	
+	
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	
+	.productfull .image_middle { width:100%; clear:both}
+	
+	#ice_cart { position:absolute; top:0; right:0}
+
+	#categories .joomshooping_categories_item { width:210px;}
+	
+	
+	.jshop_list_category .jshop_categ .image { min-height:0; text-align:center; float:none}
+		
+
+	.jshop_list_product .block_product {
+		width:100%!important;
+		float:none}	
+	
+	.productfull .price_area { width:90%; padding:5%; margin:30px 0}	
+		
+		
+	/* cart table responsive */	
+	table.jshop.cart, 
+	table.jshop.cart thead, 
+	table.jshop.cart tbody,
+	table.jshop.cart th, 
+	table.jshop.cart td, 
+	table.jshop.cart tr { 
+		display: block;
+		border:none;}
+	
+	table.jshop.cart thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;}
+	
+	table.jshop.cart tr { border: 1px solid #DCDFE0; }
+	
+	table.jshop.cart td { 
+		border: none;
+		border-bottom: 1px solid #DCDFE0; 
+		position: relative;
+		padding-left: 50%;}
+	
+	table.jshop.cart td:before { 
+		position: absolute;
+		top: 8px;
+		left: 0;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;}
+	
+	
+	
+}
+
+
+
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	
+	
+	body #ice_cart div.lof_jshop_top { border: none; padding-left: 0; padding-right: 0;}
+	
+	body .icecart_dropdown { right: -15px; min-width: 300px;}
+	
+	.jshop_list_product .box_products_sorting {
+		margin-right:0;
+		margin-bottom:12px;
+		text-align:right;
+		display:block}
+		
+	.jshop_list_product .box_products_count_to_page {
+		text-align:right;
+		display:center}
+
+	#ice_cart .popover {
+		max-width: 260px;
+		min-width: 260px;}
+
+
+	
+}

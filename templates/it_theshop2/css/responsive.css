@@ -1,0 +1,125 @@
+/* -------------------------------------------------------------
+	© IceTheme 2013
+---------------------------------------------------------------- */
+
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+	#content #content_inner { width: 890px;}
+	
+	#sidebar { width:280px;}
+	
+	#showcase { padding-top:60px; padding-bottom:40px;}
+	
+	#footer .moduletable h3.mod-title{
+		font-size: 24px;
+		margin-bottom:10px;
+		line-height: 36px;}
+	
+	.icecarousel .carousel-caption { max-width:680px; top:120px; left: 50px;}
+	ul.carousel-nav { top:140px;}	
+	.icecarousel .carousel-caption h4 { font-size:52px; line-height:62px;}
+	.icecarousel .mod-ice-carousel-description p { font-size:16px; line-height:32px;}
+	body .btn-carousel { margin-right:440px;}	
+	
+	#testimonials .testimonials_quote { max-width:900px;}		
+}
+
+
+/* Smaller than Large Desktop */
+@media (max-width: 1200px) {
+	
+	#sidebar, #content_inner { height:auto!important}	
+
+	
+}
+
+
+
+	
+/* landscape tablet and desktop */
+@media (max-width: 979px) {
+	
+	#content #content_inner { border-radius:10px; width:100%}
+	
+	#content #content_inner #middlecol {}
+		
+	#content #content_inner #middlecol .inside { }	
+
+	#icecarousel .icecarousel .carousel-image img { display:none}
+	
+	.icecarousel .carousel-caption { position:relative; top: 20px; max-width:100%}
+	ul.carousel-nav { top:50px}
+	#icecarousel { padding-top: 40px; padding-bottom:60px; min-height:300px;}
+	
+	#ice_cart { border-left:none}
+	
+	#testimonials .testimonials_img { display:none}
+	#testimonials .testimonials_quote { max-width:100%}
+	
+	#sidebar { width:100%; margin-bottom: 30px; min-height:0}
+		#sidebar .sidebar_module h3.sidebar_module_heading { border-radius:10px;}
+		#sidebar .sidebar_module h3.sidebar_module_heading:after { display:none}
+	
+}
+
+
+@media (min-width: 767px) and (max-width: 979px) {
+	
+
+}
+	
+	
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+	#topbar,
+	#header,
+	#promo,
+	#footer { margin-left:-20px; padding-left:20px; margin-right:-20px; padding-right:20px;}
+	
+	#testimonials blockquote { margin-left:10px; margin-right:10px;}
+	#testimonials blockquote:before,
+	#testimonials blockquote:after { display:none}
+	
+	
+	#search form .inputbox { width:280px;}
+	#search a { display:block}
+	
+	
+	body .btn-carousel { margin-right:20px;}
+}
+
+
+
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	
+	#logo { max-width:150px; margin-top: 25px;}
+	
+	body div.container > div.icemegamenu { top:60px;}		
+	
+	#showcase { margin-top:70px; margin-bottom:20px;}
+	#showcase h3.general_module_heading { font-size: 38px; margin-bottom:4px;}
+
+
+	.scrollup {
+		-webkit-transform:scale(.75);
+		-moz-transform: scale(.75);
+		-o-transform: scale(.75);
+		-ms-transform: scale(.75);
+		transform: scale(.75);
+		bottom:-12px;
+		left:45%;
+		display: block!important;
+		position:relative!important;}
+	
+	ul#ice-switcher { display:none}
+	
+	body.offline_page .inputbox { width:auto}
+	
+	#search form .inputbox { width:auto}
+}

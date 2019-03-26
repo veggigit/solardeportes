@@ -1,0 +1,146 @@
+/* -------------------------------------------------------------
+	© IceTheme 2013
+---------------------------------------------------------------- */
+
+
+/* ---------------------- pages.css --------------------------
+
+This CSS file contains the styles for the 
+About Us, FAQ, Testimonials, Portfolio and Services.
+---------------------------------------------------------------- */
+
+
+
+/* About Us 
+**************/
+body.page-about {}
+
+	body.page-about blockquote  {
+		clear:both;
+		margin-top:30px;
+		margin-bottom:30px}
+		
+		body.page-about blockquote p {
+			font-size:0.90em;
+			line-height:1.7em;}
+	
+	body.page-about .page-team {
+		width:30%;
+		padding:0 1.5%;
+		float:left;
+		margin:25px 0}	
+		
+		body.page-about .page-team h4 {
+			margin: 0 0 4px;
+			text-align:center;}
+		
+		body.page-about .page-team em {
+			text-align: center;
+			display: block;
+			color: #999;
+			margin-bottom: 10px;}
+
+/* Services
+**************/
+body.page-services {}
+
+	body.page-services .page-service {
+		width:30%;
+		padding:0 1.5%;
+		float:left;
+		margin:15px 0}	
+		
+		body.page-services .page-service h4 {
+			margin-bottom:8px}
+			
+		
+		body.page-services .page-service img {
+			margin:5px 10px 5px 0;
+			float:left}
+		
+		
+	body.page-services blockquote  {
+		clear:both;
+		margin-top:40px;
+		margin-bottom:25px}
+		
+		body.page-services blockquote p {
+			font-size:0.9em;
+			line-height:1.7em;}
+
+/* Photo Gallery
+**************/
+div.sigplus-gallery ul > li > img,
+div.sigplus-gallery ul > li > a > img {
+	margin: 5px!important;}
+	
+div.sigplus-gallery ul > li > a:hover{
+   position:relative;
+   top:-10px;
+   opacity: 0.5;
+   cursor:pointer;
+  -webkit-transition: opacity 0.5s 0s ease-in-out;
+   -moz-transition: opacity 0.5s 0s ease-in-out;
+   -o-transition: opacity 0.5s 0s ease-in-out;
+   -ms-transition: opacity 0.5s 0s ease-in-out;
+   transition: opacity 0.5s 0s ease-in-out;}
+	
+div.sigplus-gallery ul>li>a{
+	border:1px solid #ccc;
+	margin:10px 15px;}
+
+		
+/* Portfolio
+**************/
+body.page-portfolio {}
+
+	body.page-portfolio div.page-portfolio {
+		width:30%;
+		padding:0 1.5%;
+		float:left;
+		margin:15px 0 40px}	
+		
+		body.page-portfolio div.page-portfolio h4 {
+			margin-bottom:2px}
+		
+		body.page-portfolio div.page-portfolio p {
+			margin-bottom:1em;
+			color:#888}	
+			
+		body.page-portfolio div.page-portfolio img {
+			margin:5px 0 0 0;}
+			
+			body.page-portfolio div.page-portfolio img:hover{
+				opacity:0.6;}
+		
+	body.page-portfolio blockquote  {
+		clear:both;
+		margin-top:40px;
+		margin-bottom:35px}
+		
+		body.page-portfolio blockquote p {
+			font-size:0.90em;
+			line-height:1.7em;}
+
+/* Testimonials
+**************/
+body.page-testimonials {}
+
+	body.page-testimonials blockquote  {
+		clear:both;
+		margin-top:60px;
+		margin-bottom:10px}
+		
+		body.page-testimonials blockquote p {
+			font-size:1.2em;
+			line-height:2em;}
+						
+		body.page-testimonials em {
+			font-size:0.9em;
+			color:#777;
+			font-style:normal;
+			padding-left:79px;
+			margin-bottom:30px;}
+			
+			body.page-testimonials blockquote:hover{
+				background-color:#E3E4E6;}

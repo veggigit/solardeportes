@@ -1,0 +1,113 @@
+/* -------------------------------------------------------------
+	© IceTheme 2013
+---------------------------------------------------------------- */
+
+/* 
+DO NOT DELETE THIS LINE
+Necessary to check if StyleSheet has loaded  */
+#dummy-element{width:2px;} 
+
+/* general.css */
+#header {
+	background-color:#1A1A1A;
+	background-image:url(../../images/styles/style3/header.png);
+	padding-bottom:3rem;
+	}
+	
+body .btn-carousel {
+	background:#331515;}
+	
+body .btn-carousel:hover {
+	background:#4C1F1F}
+	
+ul.carousel-nav li a{
+	background-color:#202020;}
+	
+ul.carousel-nav li a:hover {
+	background-color:#424242}	
+		
+ul.carousel-nav li a.active {
+	background-color:#424242;}
+	
+body .button {
+	background:#5E2626;}
+	
+body .button:hover {
+	background:#823434}	
+	
+#categories .icecircle-inner .icecircle-inner-back{
+	background:#B39090;}
+	
+/* default_icemegamenu.css */
+.icemegamenu > ul > li:hover > a.iceMenuTitle span.icemega_title,
+.icemegamenu > ul > li.active > a.iceMenuTitle span.icemega_title {
+	background-color:#555;}
+		
+ul.icesubMenu {
+    background-color:rgba(50 ,50 ,50, 0.85);}
+	
+	
+#ice_cart{
+	border-left-color:#737373;}
+	
+.icesubMenu .icemega_cover_module form#login-form .input-prepend .add-on{
+	background:#DBDBDB;}	
+
+		
+.ice-megamenu-toggle a { background: #353535;}
+.ice-megamenu-toggle a:hover { background:#4F4F4F;}
+
+		
+/* flexslider.css */
+.iceslider .flex-control-paging li a.flex-active {
+	background-color:#B39090}
+	
+/* modules.css */
+#sidebar .sidebar_module h3.sidebar_module_heading {
+	border-bottom-color:#E3E4E6;
+	background:-webkit-gradient(linear,top, bottom, from(#B0B2B3), to(#A0A2A3));
+	background:-moz-linear-gradient(top, #B0B2B3, #A0A2A3); 
+	background:-ms-linear-gradient(top, #B0B2B3, #A0A2A3);
+	background:-o-linear-gradient(top, #B0B2B3, #A0A2A3);}
+
+	#sidebar .sidebar_module_style1 h3.sidebar_module_heading {
+				background-color:#826434;
+				background:-webkit-gradient(linear, left top, left bottom, from(#826434), to(#5E4826));
+				background:-moz-linear-gradient(top, #826434, #5E4826); 
+				background:-ms-linear-gradient(top, #826434, #5E4826);
+				background:-o-linear-gradient(top, #826434, #5E4826);}
+	
+	#sidebar .sidebar_module_style2 h3.sidebar_module_heading {
+				background-color:#2F4E77;
+				background:-webkit-gradient(linear, left top, left bottom, from(#2F4E77), to(#213653));
+				background:-moz-linear-gradient(top, #2F4E77, #213653); 
+				background:-ms-linear-gradient(top, #2F4E77, #213653);
+				background:-o-linear-gradient(top, #2F4E77, #213653);}
+				
+/* joomla.css */
+div.pagination ul li.active a,
+div.pagination ul li a:hover { 
+	background:#BE985E; 
+	border-color:#BE985E;}
+				
+#language{
+	background-color:#737373;}
+				
+/* joomshopping.css */
+.button.button_cart {
+	background-color:#823434;}
+	
+.button.button_cart:before {
+	background-color:#A64C4C;}
+		
+	.button.button_cart:hover:before {
+		background-color:#C46C6C}	
+	
+#ice_cart div.lof_jshop_top {
+	border-color:#555;}		
+	
+@media (min-width: 768px) {
+  #header {
+    padding-bottom:0;
+  }
+}
