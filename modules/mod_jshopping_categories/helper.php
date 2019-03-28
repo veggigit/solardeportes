@@ -57,5 +57,8 @@ class jShopCategoriesHelper
         return $cats;
     }
     /* nuevo */
+    public static function hola(){
+        return 'holaaaaaaaaa';
+    }
 }
  
