@@ -50,9 +50,12 @@ class jShopCategoriesHelper
         return $res_arr;
     }
 
-    public static function hola()
-    {
-        return 'holaaaaa mundo!';
+    /* nuevo */
+    public static function getCategoriasMenuu(){
+        $cat = JTable::getInstance('category', 'jshop');
+        $cats = $cat->getCategoriasMenu();
+        return $cats;
     }
+    /* nuevo */
 }
  
