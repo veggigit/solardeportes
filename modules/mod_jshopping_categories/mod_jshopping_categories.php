@@ -40,10 +40,6 @@
     $category->load($category_id);
     $categories_id = $category->getTreeParentCategories();
     $categories_arr = jShopCategoriesHelper::getCatsArray($field_sort, $ordering, $category_id, $categories_id);
-
-    /* nuevo */
-    $categorias_arr = jShopCategoriesHelper::getCategoriasMenuu();
-    /* nuevo */
     
     $jshopConfig = JSFactory::getConfig();
 
