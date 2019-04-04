@@ -52,13 +52,29 @@ class jShopCategoriesHelper
 
     /* nuevo */
     public static function getCategoriasMenuu(){
+        require_once (JPATH_SITE.'/components/com_jshopping/lib/factory.php');
+
         $cat = JTable::getInstance('category', 'jshop');
         $cats = $cat->getCategoriasMenu();
-        return $cats;
+        $cats2 = $cats;
+        $html = "<ul>";
+
+        foreach ($cats as $key => $value) {
+            if ($cats[$key]->category_parent_id == 0) {
+                $html .= "<li>".$cats[$key]->name."</li>";
+                $html .= "<ul>";
+                foreach ($cats2 as $key2 => $value2){   
+                    if ($cats[$key]->category_id == $cats2[$key2]->category_parent_id) {
+                        $html .= "<li>".$cats2[$key2]->name."</li>";
+                    }
+                }
+                $html .= "</ul>";
+            }
+        }
+
+        $html .= "</ul>";
+        return $html;
     }
     /* nuevo */
-    public static function hola(){
-        return 'holaaaaaaaaa';
-    }
 }
- 
+?>
