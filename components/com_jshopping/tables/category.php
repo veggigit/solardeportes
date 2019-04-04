@@ -49,7 +49,7 @@ class jshopCategory extends JTableAvto{
         
         $query = "SELECT `".$lang->get('name')."` as name, category_id, category_parent_id FROM `#__jshopping_categories`
                    WHERE ".$add_where."
-                   ORDER BY ".$orderby." asc";
+                   ORDER BY category_parent_id asc, ".$orderby." asc";
 
         $this->_db->setQuery($query);
         $categories = $this->_db->loadObjectList();
