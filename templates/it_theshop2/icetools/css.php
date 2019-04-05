@@ -12,6 +12,10 @@ defined('_JEXEC') or die;
 // Twitter bootstrap
 $doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/bootstrap/css/bootstrap.min.css');
 
+$doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css_menu/component.css');
+$doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css_menu/icons.css');
+$doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css_menu/normalize.css');
+$doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/css_menu/otros.css');
 if ($this->params->get('responsive_template')) {
 	$doc->addStyleSheet($this->baseurl. '/templates/' .$this->template. '/bootstrap/css/bootstrap-responsive.min.css');
 } 
