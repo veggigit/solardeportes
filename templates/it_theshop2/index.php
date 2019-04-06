@@ -46,9 +46,12 @@ include_once(JPATH_ROOT . "/templates/" . $this->template . '/icetools/vars.php'
 <body class="<?php echo $pageclass->get('pageclass_sfx'); ?>">
 
 <!-- load menu module -->
+<div class="wrap-mobile-menu">
 <?php include_once(JPATH_ROOT . "/templates/" . $this->template . '/mobile_menu_module/menu.php');?>
+</div>
 
-    <?php if ($this->params->get('styleswitcher')) { ?>
+<div class="wrap-body-content">
+<?php if ($this->params->get('styleswitcher')) { ?>
     <ul id="ice-switcher">
         <li class="style1"><a
                 href="templates/<?php echo $this->template;?>/css/styles/style-switcher.php?templatestyle=style1"><span>Style
@@ -457,6 +460,7 @@ $document->addStyleSheet('templates/' . $app->getTemplate(). '/css/flexslider.cs
         var myRightColumn = document.getElementById("content_inner"); /* Column Name*/
     </script>
     <?php } ?>
+            </div>
 
 </body>
 
