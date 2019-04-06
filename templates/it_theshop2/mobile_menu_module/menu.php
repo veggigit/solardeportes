@@ -18,7 +18,7 @@ foreach ($data as $key => $value) {
             "<li class='first-level'>
             <a href='" . $data[$key]->category_link . "' class='direct'></a>
             <input type='checkbox' id='" . $data[$key]->category_id . "' >
-            <label class='".$data[$key]->category_id."' for='" . $data[$key]->category_id . "'> " . $data[$key]->name . "</label>";
+            <label class='" . $data[$key]->category_id . "' for='" . $data[$key]->category_id . "'> " . $data[$key]->name . "</label>";
 
         $html .= "<ul>";
         foreach ($cats2 as $key2 => $value2) {
@@ -156,34 +156,52 @@ echo $html;
 
 <!-- scripts -->
 <script>
-(function addIcontoElementWithChild(){
-    
-    let arr = document.querySelectorAll('.first-level');
+    (function addIconToElementWithChild() {
 
-   //Si el elemento  elem su first ul tiene li (hijos). Agregasmos class 'has-child' y agregamos icon +
-    arr.forEach(function(elem){
-        if(elem.querySelector('ul li') != null ) {
-            elem.classList.add('has-child');
-            elem.innerHTML += "<i class='zmdi zmdi-plus-circle' style='position:absolute; top: 20px; right:20px; color:white; font-size: 1.2em;'></i>";
+        // Array
+        let arr = document.querySelectorAll('.first-level');
+
+        //Si el elemento  elem su first ul tiene li (hijos). Agregasmos class 'has-child' y agregamos icon +
+        arr.forEach(function(elem) {
+
+            if (elem.querySelector('ul li') != null) {
+                let label = elem.querySelector('label');
+                label.innerHTML += "<i class='zmdi zmdi-plus-circle' style='position:absolute; top: 20px; right:20px; color:white; font-size: 1.2em;'></i>";
+
+                elem.classList.add('has-child');
+            }
+        });
+
+    })();
+
+    (function toggle() {
+
+        // Funcion toggle
+        function toggleClass() {
+
+            // Sleccionamos icon del label
+            var icon = this.querySelector('i');
+
+            // Aplicamos togle
+            if (icon.classList.contains('zmdi-plus-circle')) {
+                icon.classList.replace('zmdi-plus-circle', 'zmdi-close')
+            } else {
+                icon.classList.replace('zmdi-close', 'zmdi-plus-circle')
+            }
+
         }
-    });
 
-})();
+        // Array
+        let arr = document.querySelectorAll('.has-child');
 
-(function toggleicon(){
+        arr.forEach(function(elem) {
 
-    let arr = document.querySelectorAll('.has-child');
+            let label = elem.querySelector('label')
+            let valueClass = label.getAttribute('class');
+            let labelToClick = document.getElementsByClassName(valueClass)[0];
+            labelToClick.addEventListener('click', toggleClass);
 
-    function toggleclass (){
-        this.classList.toggle('lolo');
-    }
+        });
 
-    arr.forEach(function(elem) {
-        let classvalue = elem.getElementsByTagName('label')[0].getAttribute('class');
-        // console.log(classvalue);
-        let label = document.getElementsByClassName(classvalue)[0];
-        label.addEventListener('click', toggleclass);
-    });
-
-})();
+    })();
 </script>
