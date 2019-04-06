@@ -18,7 +18,7 @@ foreach ($data as $key => $value) {
             "<li class='first-level'>
             <a href='" . $data[$key]->category_link . "' class='direct'></a>
             <input type='checkbox' id='" . $data[$key]->category_id . "' >
-            <label class='padre' for='" . $data[$key]->category_id . "'> " . $data[$key]->name . "</label>";
+            <label class='".$data[$key]->category_id."' for='" . $data[$key]->category_id . "'> " . $data[$key]->name . "</label>";
 
         $html .= "<ul>";
         foreach ($cats2 as $key2 => $value2) {
@@ -156,10 +156,11 @@ echo $html;
 
 <!-- scripts -->
 <script>
-(function checkfatherelement(){
+(function addIcontoElementWithChild(){
     
-    var arr = document.querySelectorAll('.first-level')
+    let arr = document.querySelectorAll('.first-level');
 
+   //Si el elemento  elem su first ul tiene li (hijos). Agregasmos class 'has-child' y agregamos icon +
     arr.forEach(function(elem){
         if(elem.querySelector('ul li') != null ) {
             elem.classList.add('has-child');
@@ -170,11 +171,19 @@ echo $html;
 })();
 
 (function toggleicon(){
-    var el = document.getElementById('102')
-    function toggle (){
-        this.classList.toggle('aaaaaaa');
+
+    let arr = document.querySelectorAll('.has-child');
+
+    function toggleclass (){
+        this.classList.toggle('lolo');
     }
-    el.addEventListener('click', toggle)
+
+    arr.forEach(function(elem) {
+        let classvalue = elem.getElementsByTagName('label')[0].getAttribute('class');
+        // console.log(classvalue);
+        let label = document.getElementsByClassName(classvalue)[0];
+        label.addEventListener('click', toggleclass);
+    });
 
 })();
 </script>
