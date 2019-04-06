@@ -16,15 +16,6 @@ if (JRequest::getCmd("tmpl", "index") == "offline") {
     }
 } else {
 
-// importamos helper
-include_once $_SERVER['DOCUMENT_ROOT'] . "modules/mod_jshopping_categories/helper.php";
-
-// nuevo objeto
-require_once (JPATH_SITE.'/components/com_jshopping/lib/factory.php');
-$obj = new jShopCategoriesHelper();
-$data = $obj->getCategoriasMenuu();
-
-
 // Include Variables
 include_once(JPATH_ROOT . "/templates/" . $this->template . '/icetools/vars.php');
 
