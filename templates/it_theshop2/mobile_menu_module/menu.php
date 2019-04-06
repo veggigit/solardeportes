@@ -64,12 +64,26 @@ echo $html;
         overflow: hidden;
     }
 
-    /* plugin */
+    /* ANIMATION */
+    .menushow {
+        margin-left: 0 !important;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+    }
+    /* importante para la animacion */
     .cd-accordion-menu {
-        position: relative;
-        width: 315px;
+        margin-left: -315px;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
     }
 
+    /* BTN NUKE */
     .cd-accordion-menu a.nuke-btn {
         position: absolute;
         top: 0;
@@ -79,6 +93,48 @@ echo $html;
         display: block;
         padding: 1px 8px !important;
         background: #4d5158;
+    }
+
+    /* NUEVO & RESET */
+    .cd-accordion-menu ul,
+    li,
+    label {
+        margin: 0;
+    }
+
+    .cd-accordion-menu .first-level {
+        background: #4d5158;
+        box-shadow: inset 0 -1px #555960;
+        position: relative;
+    }
+
+    .cd-accordion-menu .first-level .direct {
+        background: rgba (white, 0);
+        position: absolute;
+        left: 0;
+        top: 15px;
+        width: 45%;
+        height: 20px;
+        z-index: 2;
+        padding: 0;
+    }
+
+    .cd-accordion-menu .second-level {
+        background: #2e2f31;
+        box-shadow: inset 0 -1px #404246;
+    }
+
+    .cd-accordion-menu .second-level a {
+        padding-left: 64px !important;
+    }
+
+    /* ------------------------------------------ */
+    /* PLUGIN dont  touch 
+    /* ------------------------------------------ */
+    .cd-accordion-menu {
+        position: relative;
+        width: 315px;
+        margin-left: -315px;
     }
 
     .cd-accordion-menu ul,
@@ -115,46 +171,9 @@ echo $html;
         /* show second-level when item is checked */
         display: block;
     }
-
-    /* NUEVO */
-    .cd-accordion-menu {
-        margin: 0;
-    }
-
-    .cd-accordion-menu ul,
-    li,
-    label {
-        margin: 0;
-    }
-
-    .cd-accordion-menu .first-level {
-        background: #4d5158;
-        box-shadow: inset 0 -1px #555960;
-        position: relative;
-    }
-
-    .cd-accordion-menu .first-level .direct {
-        background: rgba (white, 0);
-        position: absolute;
-        left: 0;
-        top: 15px;
-        width: 45%;
-        height: 20px;
-        z-index: 2;
-        padding: 0;
-    }
-
-    .cd-accordion-menu .second-level {
-        background: #2e2f31;
-        box-shadow: inset 0 -1px #404246;
-    }
-
-    .cd-accordion-menu .second-level a {
-        padding-left: 64px !important;
-    }
 </style>
 
-<!-- scripts -->
+
 <script>
     (function addIconToElementWithChild() {
 
@@ -174,7 +193,7 @@ echo $html;
 
     })();
 
-    (function toggle() {
+    (function toggleIcon() {
 
         // Funcion toggle
         function toggleClass() {
@@ -189,7 +208,7 @@ echo $html;
                 icon.classList.replace('zmdi-close', 'zmdi-plus-circle')
             }
 
-        }
+        };
 
         // Array
         let arr = document.querySelectorAll('.has-child');
@@ -202,6 +221,20 @@ echo $html;
             labelToClick.addEventListener('click', toggleClass);
 
         });
+
+    })();
+
+    (function animateMenu() {
+
+        //function add class
+        function addClass() {
+            var menu = document.querySelector('.cd-accordion-menu');
+            menu.classList.toggle('menushow');
+        }
+
+        let nukeBtn = document.querySelector('.nuke-btn');
+        nukeBtn.addEventListener('click', addClass);
+
 
     })();
 </script>
