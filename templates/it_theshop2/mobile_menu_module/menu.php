@@ -10,7 +10,7 @@ $data = $obj->getCategoriasMenuu();
 // var_dump($data);
 
 $cats2 = $data;
-$html = "<ul class='cd-accordion-menu'><a href='#' class='nuke-btn'><i class='zmdi zmdi-menu'></i></a>";
+$html = "<div class='wrap-menu'><a href='#' class='nuke-btn'><i class='zmdi zmdi-menu'></i></a><ul class='cd-accordion-menu'>";
 
 foreach ($data as $key => $value) {
     if ($data[$key]->category_parent_id == 0) {
@@ -31,7 +31,7 @@ foreach ($data as $key => $value) {
     }
 }
 
-$html .= "</ul>";
+$html .= "</ul></div>";
 
 echo $html;
 ?>
@@ -41,50 +41,45 @@ echo $html;
 <style>
     /* IMPORTANTE */
     /* CLASES PARA UN BUEN FUNCIONAMIENTO. PLZ ADD ESTAS CLASES AL WRAPER DEL MENU Y  AL WRAPER DEL CONTENT */
-    .wrap-mobile-menu {
-        position: absolute;
+    body {
+        position: relative;
+    }
+
+    /* PANEL */
+    .panel {
+        position: fixed;
+        z-index: 800;
         top: 0;
         left: 0;
-        z-index: 99;
-        background: rgba(0, 0, 0, 0.8);
         width: 100%;
         height: 100%;
-        /* esto es cuando está activo */
-        overflow-y: scroll;
+        background: rgba(0, 0, 0, 0.0);
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+        display: block;
     }
 
-    .wrap-body-content {
+    /* WRAP MENU*/
+    .wrap-menu {
         position: absolute;
+        width: 315px;
         top: 0;
         left: 0;
-        z-index: 1;
-        width: 100%;
-        /* menu activo */
-        max-height: 100vh;
-        overflow: hidden;
-    }
-
-    /* ANIMATION */
-    .menushow {
-        margin-left: 0 !important;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -ms-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
-    }
-    /* importante para la animacion */
-    .cd-accordion-menu {
+        z-index: 900;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
         margin-left: -315px;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -ms-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
+        background: red;
     }
 
     /* BTN NUKE */
-    .cd-accordion-menu a.nuke-btn {
+    .wrap-menu a.nuke-btn {
         position: absolute;
         top: 0;
         right: -54px;
@@ -95,7 +90,26 @@ echo $html;
         background: #4d5158;
     }
 
-    /* NUEVO & RESET */
+    /* LAUNCH NUKE BTN FUNCTIONS / ANIMATION */
+    .menushow {
+        margin-left: 0 !important;
+    }
+
+    .panelshow {
+        display: block;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .content-fixed {
+        position: fixed !important;
+        z-index: 100 !important;
+    }
+
+    /* RESET */
+    .wrap-menu ul.cd-accordion-menu {
+        margin: 0 !important;
+    }
+
     .cd-accordion-menu ul,
     li,
     label {
@@ -125,7 +139,7 @@ echo $html;
     }
 
     .cd-accordion-menu .second-level a {
-        padding-left: 64px !important;
+        padding-left: 40px !important;
     }
 
     /* ------------------------------------------ */
@@ -134,7 +148,6 @@ echo $html;
     .cd-accordion-menu {
         position: relative;
         width: 315px;
-        margin-left: -315px;
     }
 
     .cd-accordion-menu ul,
@@ -170,6 +183,18 @@ echo $html;
         /* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors*/
         /* show second-level when item is checked */
         display: block;
+    }
+
+    /* WRAP CONTENT SITE */
+    .wrap-body-content {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        /* menu activo
+        max-height: 100vh;
+        overflow: hidden; */
     }
 </style>
 
@@ -224,17 +249,38 @@ echo $html;
 
     })();
 
-    (function animateMenu() {
+    (function launchMenu() {
 
-        //function add class
+        //function add class to menu
         function addClass() {
-            var menu = document.querySelector('.cd-accordion-menu');
+            var menu = document.querySelector('.wrap-menu');
+            var panel = document.querySelector('.panel');
+            var body = document.querySelector('.wrap-body-content');
             menu.classList.toggle('menushow');
+            panel.classList.toggle('panelshow');
+            body.classList.toggle('content-fixed');
         }
 
         let nukeBtn = document.querySelector('.nuke-btn');
         nukeBtn.addEventListener('click', addClass);
 
+    })();
+
+    (function panelClick() {
+
+        function click() {
+            var panel = document.querySelector('.panel');
+            var menu = document.querySelector('.wrap-menu');
+            var body = document.querySelector('.wrap-body-content');
+
+            if (body.classList.contains('content-fixed') && menu.classList.contains('menushow') && panel.classList.contains('panelshow'))
+                body.classList.remove('content-fixed');
+                menu.classList.remove('menushow');
+                panel.classList.remove('panelshow');
+        }
+
+        let panel = document.querySelector('.panel');
+        panel.addEventListener('click', click);
 
     })();
 </script>

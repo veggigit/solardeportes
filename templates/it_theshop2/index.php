@@ -25,10 +25,6 @@ include_once(JPATH_ROOT . "/templates/" . $this->template . '/icetools/vars.php'
     lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 
 <head>
-    <!-- plugin menu-->
-    <!-- <script src="/templates/it_theshop2/js_menu/classie.js"></script>
-    <script src="/templates/it_theshop2/js_menu/mlpushmenu.js"></script>
-    <script src="/templates/it_theshop2/js_menu/modernizr.custom.js"></script> -->
 
     <?php if ($this->params->get('responsive_template')) { ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,11 +41,13 @@ include_once(JPATH_ROOT . "/templates/" . $this->template . '/icetools/vars.php'
 
 <body class="<?php echo $pageclass->get('pageclass_sfx'); ?>">
 
-<!-- load menu module -->
-<div class="wrap-mobile-menu">
-<?php include_once(JPATH_ROOT . "/templates/" . $this->template . '/mobile_menu_module/menu.php');?>
-</div>
+<!-- OVER PANEL -->
+<div class="panel"></div>
 
+<!-- MODULE MENU -->
+<?php include_once(JPATH_ROOT . "/templates/" . $this->template . '/mobile_menu_module/menu.php');?>
+
+<!-- SITE CONTENT -->
 <div class="wrap-body-content">
 <?php if ($this->params->get('styleswitcher')) { ?>
     <ul id="ice-switcher">
