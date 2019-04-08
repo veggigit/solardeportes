@@ -81,8 +81,12 @@ function modChrome_block($module, &$params, &$attribs)
 function modChrome_sidebar($module, &$params, &$attribs)
 {
 	if ($module->content) {
-		
-		echo "<div class=\"sidebar_module sidebar_module_" . htmlspecialchars($params->get('moduleclass_sfx')). " \">";
+		//echo "<div class=\"sidebar_module sidebar_module_" . htmlspecialchars($params->get('moduleclass_sfx')). " \">";
+		if (empty($params->get("moduleclass_sfx"))) {
+			echo "<div class=\"sidebar_module sidebar_module_ \" id = 'idmenucategorias'>";
+		} else {
+			echo "<div class=\"sidebar_module sidebar_module_" . htmlspecialchars($params->get('moduleclass_sfx')). " \">";
+		}
 		
 		if ($module->showtitle)
 		{
