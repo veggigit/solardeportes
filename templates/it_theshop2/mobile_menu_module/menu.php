@@ -196,6 +196,12 @@ echo $html;
         max-height: 100vh;
         overflow: hidden; */
     }
+
+    /* media query */
+    @media (min-width: 768px) {
+        .wrap-menu a.nuke-btn {
+            display: none;
+        }
 </style>
 
 
@@ -275,8 +281,8 @@ echo $html;
 
             if (body.classList.contains('content-fixed') && menu.classList.contains('menushow') && panel.classList.contains('panelshow'))
                 body.classList.remove('content-fixed');
-                menu.classList.remove('menushow');
-                panel.classList.remove('panelshow');
+            menu.classList.remove('menushow');
+            panel.classList.remove('panelshow');
         }
 
         let panel = document.querySelector('.panel');
