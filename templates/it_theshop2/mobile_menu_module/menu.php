@@ -59,7 +59,7 @@ echo $html;
         -ms-transition: 1s;
         -o-transition: 1s;
         transition: 1s;
-        display: block;
+        display: none;
     }
 
     /* WRAP MENU*/
