@@ -1,13 +1,11 @@
 <?php
 
 // importamos helper
-include_once $_SERVER['DOCUMENT_ROOT'] . "modules/mod_jshopping_categories/helper.php";
+require_once(JPATH_SITE . "/modules/mod_jshopping_categories/helper.php");
 
 // nuevo objeto
-require_once(JPATH_SITE . '/components/com_jshopping/lib/factory.php');
 $obj = new jShopCategoriesHelper();
 $data = $obj->getCategoriasMenuu();
-// var_dump($data);
 
 $cats2 = $data;
 $html = "<div class='wrap-menu'><a href='#' class='nuke-btn'><i class='zmdi zmdi-menu'></i></a><ul class='cd-accordion-menu'>";
