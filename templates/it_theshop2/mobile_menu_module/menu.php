@@ -190,16 +190,32 @@ echo $html;
         left: 0;
         z-index: 1;
         width: 100%;
-        /* menu activo
-        max-height: 100vh;
-        overflow: hidden; */
+    }
+
+    /* EXTRA: SIDEBAR CATEGORY PRODUCT & MOBILE TEMPLATE MENU */
+    #idmenucategorias {
+        display: none !important;
+    }
+
+    .icemegamenu {
+        display: none !important;
     }
 
     /* media query */
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
+
         .wrap-menu a.nuke-btn {
             display: none;
         }
+
+        #idmenucategorias {
+            display: block !important;
+        }
+
+        .icemegamenu {
+            display: block !important;
+        }
+    }
 </style>
 
 
