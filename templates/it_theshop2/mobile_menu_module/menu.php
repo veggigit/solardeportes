@@ -8,7 +8,7 @@ $obj = new jShopCategoriesHelper();
 $data = $obj->getCategoriasMenuu();
 
 $cats2 = $data;
-$html = "<div class='wrap-menu'><a href='#' class='nuke-btn'><i class='zmdi zmdi-menu'></i></a><ul class='cd-accordion-menu'>";
+$html = "<div class='wrap-menu'><a href='#' class='nuke-btn'><i class='zmdi zmdi-menu'></i></a><ul class='cd-accordion-menu'><a href='/contacto.html' class='btn btn-primary' style='border-radius:0; padding-top:23px; padding-bottom:23px;'><i class='zmdi zmdi-email'></i> Contáctanos</a>";
 
 foreach ($data as $key => $value) {
     if ($data[$key]->category_parent_id == 0) {
@@ -29,7 +29,7 @@ foreach ($data as $key => $value) {
     }
 }
 
-$html .= "</ul></div>";
+$html .= "<li><a href='/nuestra-empresa.html' class='btn btn-inverse' style='border-radius:0; padding-top:23px; padding-bottom:23px;'><i class='zmdi zmdi-star-circle'></i> Nosotros</a></li></ul></div>";
 
 echo $html;
 ?>
