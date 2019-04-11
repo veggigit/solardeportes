@@ -133,7 +133,29 @@
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-	
+    /* celular 25/03/2019 */
+    #categories .joomshooping_categories_item { 
+        width:125px;
+        height: 200px;
+    }
+    #categories .icecircle-wrap,
+    #categories .icecircle-inner{
+        width: 150px;
+        height: 150px;
+        }
+    #categories .joomshooping_categories_title {
+        width: 120px;
+        margin-top: 50px;
+        }
+    #categories .icecircle-inner .icecircle-inner-front img {
+        margin-top: 33px;
+        }
+    img{max-width: 70%;}
+    #categories .joomshooping_categories_title h3 {
+        font-size: 17px;
+        line-height: 13px;
+    }
+    /* celular 25/03/2019 */
 	
 	body #ice_cart div.lof_jshop_top { border: none; padding-left: 0; padding-right: 0;}
 	
