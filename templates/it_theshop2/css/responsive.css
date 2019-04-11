@@ -66,7 +66,13 @@
 
 
 @media (min-width: 767px) and (max-width: 979px) {
-	
+	#topbar{
+		margin-left:-20px; 
+		padding-left:15px; 
+		margin-right:-20px; 
+		padding-right:15px;
+	}
+	#logo { max-width:200px; margin-top: 25px; margin-left:57px;}
 
 }
 	
@@ -75,7 +81,12 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 
-	#topbar,
+	#topbar{
+		margin-left:-20px; 
+		padding-left:15px; 
+		margin-right:-20px; 
+		padding-right:15px;
+	}
 	#header,
 	#promo,
 	#footer { margin-left:-20px; padding-left:20px; margin-right:-20px; padding-right:20px;}
@@ -90,6 +101,7 @@
 	
 	
 	body .btn-carousel { margin-right:20px;}
+	#logo { max-width:150px; margin-top: 25px; margin-left:57px;}
 }
 
 
@@ -98,7 +110,7 @@
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	
-	#logo { max-width:150px; margin-top: 25px;}
+	#logo { max-width:150px; margin-top: 25px; margin-left:57px;}
 	
 	body div.container > div.icemegamenu { top:60px;}		
 	

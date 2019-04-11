@@ -3,4 +3,5 @@
 !/templates/it_theshop2/**
 !/components/com_jshopping/**
 !/modules/mod_jshopping_categories/**
+!/language/**
 !.gitignore

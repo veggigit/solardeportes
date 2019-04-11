@@ -63,7 +63,7 @@ echo $html;
     /* WRAP MENU*/
     .wrap-menu {
         position: absolute;
-        width: 315px;
+        width: 280px;
         top: 0;
         left: 0;
         z-index: 900;
@@ -72,14 +72,14 @@ echo $html;
         -ms-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s;
-        margin-left: -315px;
+        margin-left: -280px;
         background: red;
     }
 
     /* BTN NUKE */
     .wrap-menu a.nuke-btn {
         position: absolute;
-        top: 0;
+        top: 20px;
         right: -54px;
         color: white;
         font-size: 2.8rem;
@@ -145,7 +145,7 @@ echo $html;
     /* ------------------------------------------ */
     .cd-accordion-menu {
         position: relative;
-        width: 315px;
+        width: 280px;
     }
 
     .cd-accordion-menu ul,
