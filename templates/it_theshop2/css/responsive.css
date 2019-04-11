@@ -58,7 +58,7 @@
 	#testimonials .testimonials_img { display:none}
 	#testimonials .testimonials_quote { max-width:100%}
 	
-	#sidebar { width:100%; margin-bottom: 30px; min-height:0}
+	#sidebar { width:100%; margin-bottom: 0; min-height:0}
 		#sidebar .sidebar_module h3.sidebar_module_heading { border-radius:10px;}
 		#sidebar .sidebar_module h3.sidebar_module_heading:after { display:none}
 	

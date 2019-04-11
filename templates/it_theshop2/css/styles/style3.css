@@ -11,7 +11,7 @@ Necessary to check if StyleSheet has loaded  */
 #header {
 	background-color:#1A1A1A;
 	background-image:url(../../images/styles/style3/header.png);
-	padding-bottom:3rem;
+	/* padding-bottom:3rem; */
 	}
 	
 body .btn-carousel {
