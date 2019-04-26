@@ -6,7 +6,7 @@ $db->setQuery($query);
 $attr_total = $db->loadResult(); 
 ?>
             
-<div class="product productitem_<?php print $product->product_id?>">
+<div class="item productitem_<?php print $product->product_id?>">
 
     <div class="image">
         <?php if ($product->image){?>
@@ -31,7 +31,15 @@ $attr_total = $db->loadResult();
     </div>
     
         <div class="name">
-            <a href="<?php print $product->product_link?>"><?php print $product->name?></a>
+            <a href="<?php print $product->product_link?>">
+                <?php
+                    $puntosTitulo = '';
+                    if (strlen($product->name) > 55) {
+                        $puntosTitulo = '...';
+                    }
+                    print substr($product->name, 0, 52).$puntosTitulo
+                ?>
+            </a>
             <?php if ($this->config->product_list_show_product_code){?><span class="jshop_code_prod">(<?php print _JSHOP_EAN?>: <span><?php print $product->product_ean;?></span>)</span><?php }?>
         </div>
 		 <?php if ($product->product_old_price > 0){?>
@@ -49,7 +57,13 @@ $attr_total = $db->loadResult();
         <?php }?>
 		
         <div class="description">
-            <?php print $product->short_description?>
+            <?php 
+                $puntos = '';
+                if (strlen($product->short_description) > 60) {
+                    $puntos = '...';
+                }
+                print substr($product->short_description, 0, 60).$puntos
+            ?>
         </div>
 		 <?php if ($this->allow_review){?>
         <table class="review_mark"><tr><td><?php print showMarkStar($product->average_rating);?></td></tr></table>
@@ -96,9 +110,6 @@ $attr_total = $db->loadResult();
         <?php }?>
         <?php print $product->_tmp_var_top_buttons;?>
 		
-        
-        
-        
         <div class="buttons">
         
 		<?php if($attr_total > 0){?>
